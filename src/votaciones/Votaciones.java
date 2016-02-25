@@ -27,18 +27,18 @@ public class Votaciones {
         System.out.println("El número de municipios es " + m + " y por cada uno hay " + c + " candidatos");
         //Ingresan el numero de municipios y candidatos
         mat = new int[m][c];//ingreso de los votos por candidato
-        for(p=1;p<=m;p++){
-            for(k=0;k<=c;k++){
+        for(p=0;p<m;p++){
+            for(k=0;k<c;k++){
             System.out.println("Votos Mun. " + p + ", candidato " + k);
-                mat[p][k]=lectura.nextInt();
+                mat[p][k] =lectura.nextInt();
             }
             
         }//Llenado de cada espacio de la matriz-votos
         System.out.println("Tabla de votaciones");
-        for(p=0;p<=m;p++){
-            System.out.println("Mun1");
-            for(k=0;k<=c;k++){
-            System.out.println("Can" + k + mat[m][c]);
+        for(p=0;p<m;p++){
+            System.out.println("Mun" + p);
+            for(k=0;k<c;k++){
+            System.out.println("Candidato "+ k + ": " + mat[p][k]);
             }
         }
         
